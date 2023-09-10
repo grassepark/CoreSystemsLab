@@ -1,0 +1,184 @@
+/* the font */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #0029c2;
+    margin: 0; /* Space from this element (entire page) and others*/
+    padding: 0; /*space from content and border*/
+    border: 0 solid #0029c2 ;
+    border-bottom: solid #0029c2;
+    /* box-shadow: inset 0px 5px 5px 0px #0053e5; */
+    border-width: 0 thick;
+    /* overflow:hidden; */
+    display:block;
+    box-sizing: border-box;
+
+}
+.border {
+    /* box-shadow: inset 0px 10px 10px 10px #0053e5; */
+    position:fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+/* text */
+
+h1 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 120px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 45px;
+    margin-bottom: 10px;
+    color: #005A77;
+}
+
+h3 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: #145deb;
+}
+
+
+/* header stuff */
+
+header {
+    position: relative;
+    background-color: #0058ee;
+    box-shadow: 0px 8px 5px #2889fe inset,
+    #174dbb 0px -15px 8px -8px inset,
+    #0054e5 -15px 20px 15px 8px inset;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0px 5px 10px;
+    z-index: 900;
+    border-radius: 10px 10px 0 0;
+
+}
+
+#nav-title {
+    margin-right: auto;
+    padding: 0px 10px;
+
+}
+
+
+header li {
+    list-style: none;
+    display: inline;
+}
+
+header a {
+    font-family: "lores-12", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+    margin-left: auto;
+    text-decoration: none;
+    /* font-family: "Segoe UI", Arial, sans-serif; */
+    text-shadow: 1px 1px 2px black;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+
+.STAY {
+    margin-left: 0;
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+/* first section */
+
+.bg {
+    /* background-image: url("/images/bliss.jpeg"); */
+    background-image: url("../images/windowsxp.gif");
+    height: 70vh;
+    width: 100% !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    align-items: end;
+    border: 30px solid white;
+}
+
+
+.vertical {
+    border-left: 40px solid white;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+ 
+}
+
+.caption h4{
+    font-family: "lores-12", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    position: relative; 
+    width: 100%;
+    height:30vh;
+    padding: 5vh 10vw;
+    z-index: 999;
+    background-color:white;
+    border-radius: 0 0 10px 10px ;
+}
+
+
+
+
+
+
+
+  @media screen and (max-width: 500px) {
+    header a{
+        font-size:13px;
+    }
+
+    #nav-title {
+        padding: 0 0 0 10px;
+    }
+
+    .vertical {
+        border-left: 30px solid white;
+     
+    }
+
+}
