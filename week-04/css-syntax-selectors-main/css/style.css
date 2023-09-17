@@ -1,21 +1,21 @@
 body {
   color: red;
-  background: black;
 }
 
 h1 {
   color: brown;
   background: pink;
 }
-#intro p{
+p{
   transition: transform .7s ease-in-out;
-  color: yellow;
-}
-#intro p:hover{
+}p:hover{
   transform: rotate(360deg);
-  color: purple;
   scale: (3.0);
   transition: 0.2s;
+}
+
+#intro p{
+  color:yellow;
 }
 
 
