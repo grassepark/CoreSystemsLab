@@ -1,0 +1,7 @@
+@import url("https://use.typekit.net/xcg8gvp.css");
+/* some code taken from https://alvarotrigo.com/blog/css-animations-scroll/ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
