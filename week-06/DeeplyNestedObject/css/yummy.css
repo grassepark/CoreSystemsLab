@@ -5,3 +5,269 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: #b5c6d7;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* text */
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  padding-bottom: 40px;
+}
+
+h4 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+h5 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #647176;
+  /* padding-bottom: 5px; */
+}
+
+.chat h5 {
+  font-size: 15px;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.chat {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px;
+  align-items: center;
+}
+
+.username {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.username.left {
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+.right {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.chat h5 {
+  margin-top: auto;
+}
+
+.right {
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.chatText {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 15px 50px 15px 20px;
+  border-radius: 20px;
+}
+
+.chatText2 {
+  display: flex;
+  flex-direction: column;
+  background-color: #FAEA5C;
+  padding: 15px 20px 15px 50px;
+  border-radius: 20px;
+}
+
+.chat img {
+  width: 50px;
+  height: 50px;
+}
+
+/* header stuff */
+
+header {
+  background-color: #abbac9;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+}
+
+#container {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+#timestamp {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+}
+
+#date {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  margin-right: auto;
+  color: #647176;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 15px 25px;
+  display: inline-block;
+}
+
+header li {
+  list-style: none;
+  display: inline;
+}
+
+header a {
+  margin-left: auto;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #647176;
+}
+
+/* first section */
+
+.bg {
+  background-color: #009cbe;
+  /* background-image: url("images/testbg.png"); */
+  height: 95vh;
+  width: 100% !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.caption {
+  width: 100%;
+  margin-left: 20vh;
+  transform: translateX(-100%);
+  animation: slide-in-anim 1.5s ease-out forwards;
+}
+
+.caption h1 {
+  width: 60%;
+}
+
+.caption h3 {
+  width: 100%;
+}
+
+@keyframes slide-in-anim {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+/* first section */
+
+.article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 120px;
+  align-items: center;
+  align-content: center;
+  margin: 200px 150px;
+}
+
+.article img {
+  border-radius: 25px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.one {
+  grid-column: 1;
+}
+
+.two {
+  grid-column: 2;
+  width: 96%;
+}
+
+.article h2 {
+  margin: 30px 0;
+}
+
+.button {
+  background-color: #009cbe;
+  border: none;
+  border-radius: 33px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #005a77;
+  border: none;
+  border-radius: 33px;
+  margin: 30px 0;
+  cursor: pointer;
+}
+
+.button p {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 60px;
+  cursor: pointer;
+}

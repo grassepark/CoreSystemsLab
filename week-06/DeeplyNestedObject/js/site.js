@@ -16,11 +16,11 @@ LongDistanceRelationship = {
       "we took photos at that abandoned mirror",
     ],
     smell: true, //cringe
-    closeToYou:false,
+    closeToYou: false,
   },
 
   whatIsStillThere: {
-    videoCall: [  
+    videoCall: [
       "i see a room from far away",
       "hearing about your new experiences",
     ],
@@ -41,13 +41,23 @@ LongDistanceRelationship = {
     smiling: true,
   },
 
+  lookingForward: {
+    futurePlans: [
+      "go to a lot more cafes",
+      "take more photos with eachother",
+      "have bauhaus style furniture",
+      "automate our electronics",
+    ],
+    uncertainty: true,
+  },
+
   happyCheck: function () {
     if (this.whatIsStillThere.smiling === true) {
-        return `Response: "I am happy!"`;
+      return `Response: "I am happy!"`;
     } else {
-        return `Response: "I need your support"`;
+      return `Response: "I need your support"`;
     }
-},
+  },
 
   //randomize the memories...
   generateRandomMemory: function () {
@@ -76,7 +86,15 @@ console.log(
   LongDistanceRelationship.ourConversations()
 );
 
-console.log(
-  "Are you happy?",
-  LongDistanceRelationship.happyCheck()
-);
+console.log("Are you happy?", LongDistanceRelationship.happyCheck());
+
+
+
+
+const d = new Date();
+const month = d.toLocaleString('default', { month: 'long' });
+const day = d.getDate();
+const year = d.getFullYear();
+
+const formattedDate = `${month} ${day}, ${year}`;
+document.getElementById("date").innerHTML = formattedDate;
