@@ -6,9 +6,11 @@ LongDistanceRelationship = {
       "texture of your Hair after a Shower",
     ],
     perfectExperience: [
-      "Looking directly into eachother's eyes",
-      "Gripping your hands",
-      "Conveniently talking with eachother",
+      "looking directly into eachother's eyes",
+      "hold eachother's hands",
+      "conveniently talk with eachother",
+      "cook and eat food together again",
+      "explore new places in the city",
     ],
     oldMemories: [
       "you ran up to me after we saw eachother",
@@ -25,9 +27,22 @@ LongDistanceRelationship = {
       "hearing about your new experiences",
     ],
     emotionalSupport: [
-      "What are you doing today?",
-      "Do you want advice? Or just emotional support?",
-      "I sent you something! Let me know when you recieve it.",
+      "I'd like to hear about what you're working on",
+      "Tell me about your day today",
+      "I sent you something! Let me know when you recieve it",
+      "I missed you",
+    ],
+
+    recipesWeMade: [
+      "gochujang pasta",
+      "kimbap",
+      "rice paper tteokboki",
+      "carbonara and salad",
+    ],
+    thingsWeDo: [ //i was
+      "out with my friends",
+      "working on a side project",
+      "spending time with my family",
     ],
     uniqueExperiences: {
       startConversation: "Remember when",
@@ -37,6 +52,11 @@ LongDistanceRelationship = {
         "take more photos",
         "go to more cafes",
       ],
+      differentThankYous: [
+        "Thank you! <3",
+        "Thank you so much!",
+        "It makes me really happy :)",
+      ]
     },
     smiling: true,
   },
@@ -59,42 +79,75 @@ LongDistanceRelationship = {
     }
   },
 
-  //randomize the memories...
+  //randomizing...
   generateRandomMemory: function () {
     const memories = LongDistanceRelationship.whatIsLost.oldMemories;
     const randomIndex = Math.floor(Math.random() * memories.length);
     return memories[randomIndex];
   },
 
-  //give me a random memory!
+  //randoms!
   randomMemory: function () {
     return this.generateRandomMemory();
   },
 
+
   //put it in a sentance!
   ourConversations: function () {
-    return `"${
+    return `${
       this.whatIsStillThere.uniqueExperiences.startConversation
     } ${LongDistanceRelationship.randomMemory()}? ${
       this.whatIsStillThere.uniqueExperiences.endConversation
-    }!"`;
+    }!`;
   },
 };
 
-console.log(
-  "A conversation we have now:",
-  LongDistanceRelationship.ourConversations()
-);
 
-console.log("Are you happy?", LongDistanceRelationship.happyCheck());
+// console.log(
+//   "A conversation we have now:",
+//   LongDistanceRelationship.ourConversations()
+// );
+// console.log("Are you happy?", LongDistanceRelationship.happyCheck());
+
+const randomConversation = LongDistanceRelationship.ourConversations();
+const conversation = document.getElementById("conversation");
+conversation.innerHTML = randomConversation;
+
+const randomConversation2 = LongDistanceRelationship.ourConversations();
+const conversation2 = document.getElementById("conversation2");
+conversation2.innerHTML = randomConversation2;
+
+//wow this is so fast
+function getRandomPhrase(arr) {
+  const randomIndex = Math.floor(Math.random() * arr.length);
+  return arr[randomIndex];
+}
+
+let randomPhraseElement1 = document.getElementById("emotionalSupport");
+let randomPhraseElement2 = document.getElementById("missingThis");
+let randomPhraseElement3 = document.getElementById("thingsWeDo");
+let randomPhraseElement4 = document.getElementById("thankYou");
+let randomPhraseElement5 = document.getElementById("perfectExperience");
+let randomPhraseElement6 = document.getElementById("emotionalSupport2");
+let randomPhraseElement7 = document.getElementById("thankYou2");
+let randomPhraseElement8 = document.getElementById("aRecipe");
+let randomPhraseElement9 = document.getElementById("perfectExperience2");
 
 
+randomPhraseElement1.textContent = getRandomPhrase(LongDistanceRelationship.whatIsStillThere.emotionalSupport);
+// randomPhraseElement2.textContent = getRandomPhrase(LongDistanceRelationship.whatIsLost.smallDetails);
+randomPhraseElement3.textContent = getRandomPhrase(LongDistanceRelationship.whatIsStillThere.thingsWeDo);
+randomPhraseElement4.textContent = getRandomPhrase(LongDistanceRelationship.whatIsStillThere.uniqueExperiences.differentThankYous);
+randomPhraseElement5.textContent = getRandomPhrase(LongDistanceRelationship.whatIsLost.perfectExperience);
+randomPhraseElement6.textContent = getRandomPhrase(LongDistanceRelationship.whatIsStillThere.emotionalSupport);
+// randomPhraseElement7.textContent = getRandomPhrase(LongDistanceRelationship.whatIsStillThere.uniqueExperiences.differentThankYous);
+randomPhraseElement8.textContent = getRandomPhrase(LongDistanceRelationship.whatIsStillThere.recipesWeMade);
+randomPhraseElement9.textContent = getRandomPhrase(LongDistanceRelationship.whatIsLost.perfectExperience);
 
 
 const d = new Date();
 const month = d.toLocaleString('default', { month: 'long' });
 const day = d.getDate();
 const year = d.getFullYear();
-
 const formattedDate = `${month} ${day}, ${year}`;
 document.getElementById("date").innerHTML = formattedDate;

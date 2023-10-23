@@ -1,134 +1,253 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="css/yummy.css" />
-    <title>Deeply Nested Object</title>
-    <!-- <link rel="icon" type="image/x-icon" href="images/icon.png"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://use.typekit.net/yqu8gqf.css" />
-    <link rel="icon" type="image/x-icon" href="images/icon.png" />
-  </head>
 
-  <body>
-    <!-- header -->
-    <div class="fixed-header"></div>
-    <header>
-      <h4 id="date"></h4>
-    </header>
+<head>
+  <link rel="stylesheet" href="css/yummy.css" />
+  <title>Deeply Nested Object</title>
+  <!-- <link rel="icon" type="image/x-icon" href="images/icon.png"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://use.typekit.net/yqu8gqf.css" />
+  <link rel="icon" type="image/x-icon" href="images/icon.png" />
+</head>
 
-    <div id="container">
-      <h1>Deeply Nested Object</h1>
+<body>
+  <!-- header -->
+  <div class="fixed-header"></div>
+  <header>
+    <h4 id="date"></h4>
 
-      <!-- chat 1 -->
-      <div class="chat">
-        <img src="images/pfp.png" />
-        <div class="username left">
-          <h4>Partner A</h4>
-          <div class="chatText">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
-        <h5>10:00AM</h5>
+    <nav role='navigation'>
+      <div id="menuToggle">
+        <input type="checkbox" />
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+          <h1>Status</h1>
+          <br>
+          <p>work in progress...</p>
+        </ul>
       </div>
+    </nav>
 
-      <!-- timestamp -->
-      <div id="timestamp">
-        <h5>12:00PM</h5>
-      </div>
+  </header>
 
-      <!-- chat 2 -->
-      <div class="chat right">
-        <div class="username right">
-          <h4>Partner A</h4>
-          <div class="chatText2">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
-      </div>
-      <div class="chat right">
-        <h5>2:00PM</h5>
-        <div class="username right">
-          <div class="chatText2">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
+  <div id="container">
+    <h1>Deeply Nested Object</h1>
+
+
+    <!-- chat 1 -->
+    <div class="chat">
+      <img src="images/pfp.png" />
+      <div class="username left">
+        <h4>Partner A</h4>
+        <div class="chatText">
+          <p>Good Morning! <span id="emotionalSupport"></span>!</p>
         </div>
       </div>
+      <h5>8:00PM</h5>
+    </div>
 
-      <!-- chat 3 -->
-      <div class="chat">
-        <img src="images/pfp.png" />
-        <div class="username left">
-          <h4>Partner A</h4>
-          <div class="chatText">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <img src="images/pfp.png" />
-        <div class="username left">
-          <div class="chatText">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
-        <h5>3:00PM</h5>
+    <!-- chat 2 -->
+    <div class="chat right">
+
+
+      <div class="chatText2">
+        <p>Good Morning! </p>
       </div>
 
-      <!-- timestamp -->
-      <div id="timestamp">
-        <h5>8:00PM</h5>
-      </div>
+    </div>
+    <div class="chat right">
+      <h5>2:00PM</h5>
+      <div class="chatText2">
+        <p><span id="thankYou"></span> Today, I was <span id="thingsWeDo"></span>.</p>
 
-      <!-- chat 4 -->
-      <div class="chat right">
-        <h5>3:00PM</h5>
-        <div class="username right">
-          <h4>Partner A</h4>
-          <div class="chatText2">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- chat 5 -->
-      <div class="chat">
-        <img src="images/pfp.png" />
-        <div class="username left">
-          <h4>Partner A</h4>
-          <div class="chatText">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
-      </div>
-      <div class="chat">
-        <img src="images/pfp.png" />
-        <div class="username left">
-          <div class="chatText">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
-        <h5>3:00PM</h5>
-      </div>
-
-      <!-- chat 2 -->
-      <div class="chat right">
-        <div class="username right">
-          <h4>Partner A</h4>
-          <div class="chatText2">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
-      </div>
-      <div class="chat right">
-        <h5>2:00PM</h5>
-        <div class="username right">
-          <div class="chatText2">
-            <p>Good Morning! aaaaaaaaaaaaa</p>
-          </div>
-        </div>
       </div>
     </div>
 
+    <!-- chat 3 -->
+    <div class="chat">
+      <img src="images/pfp.png" />
+      <div class="username left">
+        <h4>Partner A</h4>
+        <div class="chatText">
+          <p>That's good to hear!</p>
+        </div>
+      </div>
+      <h5>8:00PM</h5>
+    </div>
+
+    <!-- timestamp -->
+    <div id="timestamp">
+      <h5>11:00PM</h5>
+    </div>
+
+    <!-- chat 4 -->
+    <div class="chat right">
+      <h5>11:00PM</h5>
+
+
+      <div class="chatText2">
+        <p><span id="conversation"></span></p>
+
+      </div>
+    </div>
+
+    <!-- chat 5 -->
+    <div class="chat">
+      <img src="images/pfp.png" />
+      <div class="username left">
+        <h4>Partner A</h4>
+        <div class="chatText">
+          <p>If we wait a little longer, we can <span id="perfectExperience"></span> again!</p>
+        </div>
+      </div>
+    </div>
+    <div class="chat">
+      <img src="images/pfp.png" />
+      <div class="username left">
+        <div class="chatText">
+          <p>Wouldn't that be nice?</p>
+        </div>
+      </div>
+      <h5>11:10PM</h5>
+    </div>
+
+    <!-- chat 6 -->
+    <div class="chat right">
+
+
+      <div class="chatText2">
+        <p>That sounds so nice!</p>
+
+      </div>
+    </div>
+    <div class="chat right">
+      <h5>11:05PM</h5>
+
+      <div class="chatText2">
+        <p>Do you want to call before I sleep?</p>
+      </div>
+
+    </div>
+    <div class="image">
+      <img src="images/videoCall.jpg" class="right videoCall" />
+    </div>
+
+    <!-- chat 7 -->
+    <div class="chat">
+      <img src="images/pfp.png" />
+      <div class="username left">
+        <h4>Partner A</h4>
+        <div class="chatText">
+          <p>Good night! See you soon!</p>
+        </div>
+      </div>
+      <h5>11:30PM</h5>
+    </div>
+
+    <!-- timestamp -->
+    <div id="timestamp">
+      <h5>8:00AM</h5>
+    </div>
+
+    <!-- chat 8 -->
+    <div class="chat">
+      <img src="images/pfp.png" />
+      <div class="username left">
+        <h4>Partner A</h4>
+        <div class="chatText">
+          <p>You must be awake soon! I hope you slept well.</p>
+        </div>
+      </div>
+      <h5>8:00PM</h5>
+    </div>
+
+
+    <!-- chat 9 -->
+    <div class="chat right">
+      <h5>11:00PM</h5>
+
+      <div class="chatText2">
+        <p>Good morning! <span id="emotionalSupport2"></span> when you get the chance!</p>
+
+      </div>
+    </div>
+
+    <!-- timestamp -->
+    <div id="timestamp">
+      <h5>11:00AM</h5>
+    </div>
+
+    <!-- chat 10 -->
+    <div class="chat right">
+      <h5>11:00AM</h5>
+
+      <div class="chatText2">
+        <p>I'm having <span id="aRecipe"></span>, wanna see? </p>
+      </div>
+    </div>
+
+    <!-- chat 11 -->
+    <div class="chat">
+      <img src="images/pfp.png" />
+      <div class="username left">
+        <h4>Partner A</h4>
+        <div class="image2">
+          <img src="images/videoCall.jpg" class="left videoCall" />
+        </div>
+      </div>
+    </div>
+    <div class="chat">
+      <img src="images/pfp.png" />
+      <div class="username left">
+        <div class="chatText">
+          <p><span id="conversation2"></span></p>
+        </div>
+      </div>
+      <h5>11:10AM</h5>
+    </div>
+
+        <!-- chat 12 -->
+    <div class="chat right">
+      <h5>11:13AM</h5>
+
+      <div class="chatText2">
+        <p>If we wait a little longer, we can <span id="perfectExperience2"></span> again!</p>
+      </div>
+    </div>
+
+            <!-- chat 13 -->
+            <div class="chat">
+              <img src="images/pfp.png" />
+              <div class="username left">
+                <h4>Partner A</h4>
+                <div class="chatText">
+                  <p>I'm gonna go to sleep now!</p>
+                </div>
+              </div>
+              <h5>11:30PM</h5>
+            </div>
+
+         <!-- chat 6 -->
+    <div class="chat right">
+
+
+      <div class="chatText2">
+        <p>Okay good night! I hope you sleep well</p>
+
+      </div>
+    </div>
+    <div class="chat right">
+      <h5>11:40PM</h5>
+
+      <div class="chatText2">
+        <p>And see you soon!</p>
+      </div>
+ 
+
+
     <script src="js/site.js"></script>
-  </body>
+</body>
+
 </html>
