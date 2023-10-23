@@ -1,0 +1,43 @@
+@import url("https://use.typekit.net/xcg8gvp.css");
+/* some code taken from https://alvarotrigo.com/blog/css-animations-scroll/ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 50px;
+}
+
+#myButton {
+  background-color: black; /* Green */
+  border: none;
+  color: beige;
+  border-radius: 10px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+#myButton:hover {
+  background-color: #4CAF50; /* Green */
+  padding: 20px 36px;
+
+  transition: all 0.5s ease-out;
+}
+
+.elephant{
+ width: 50%;
+}
