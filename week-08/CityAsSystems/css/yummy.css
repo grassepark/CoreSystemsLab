@@ -7,6 +7,23 @@ body {
   overflow-x: hidden; 
 }
 
+.map {
+  height: 100vh;
+  padding: 10vw;
+
+}
+
+.cls-1 {
+  fill: #1da1f2;
+}
+.cls-1:hover {
+  fill: purple;
+  stroke: red;
+  stroke-width: 3px;
+  transition: fill 0.4s;
+}
+
+
 h1 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -73,9 +90,7 @@ header {
   left: 10vw;
 }
 
-.map {
-  width: 100%;
-}
+
 
 .container {
   overflow:hidden;
@@ -229,3 +244,4 @@ header {
   }
 
 }
+
