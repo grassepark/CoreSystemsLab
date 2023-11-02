@@ -10,13 +10,15 @@ body {
 .map {
   height: 100vh;
   padding: 10vw;
-
 }
+
 .cls-1 {
   fill: #cae0a4;
   stroke: #90d390;
   stroke-width: 2px;
 }
+
+
 .cls-1,
 .cls-2,
 .cls-3,
@@ -27,6 +29,7 @@ body {
 .cls-9 {
   stroke-miterlimit: 10;
 }
+
 .quietAreas {
   fill: #39b54a;
   stroke: #39b54a;
@@ -38,11 +41,46 @@ body {
 .cls-9 {
   opacity: 0.29;
 }
+
+#popup1 {
+  position: absolute;
+  z-index: 99;
+  opacity:0;
+  transition:opacity 300ms;
+  padding-top:20%;
+  padding-left: 20%;
+}
+
+#popup2 {
+  position: absolute;
+  z-index: 99;
+  opacity:0;
+  transition:opacity 300ms;
+  padding-top:90%;
+  padding-left: 40%;
+}
+
+.popup {
+  background-color: white;
+  padding:20px;
+}
+
+
+
+#popup1 p {
+ /* add font and stuff here */
+}
+
 .loudAreas {
-  fill: #f209;
+  fill: #f20;
   stroke: #f20;
+  opacity: 0.29;
   transition:stroke-width 300ms;
 }
+
+
+
+
 .cls-4,
 .cls-5,
 .cls-6,
@@ -71,12 +109,17 @@ body {
  transform: scale(0.7);
 }
 
+
 .quietAreas:hover {
   stroke-width: 20px;
 }
 
 .loudAreas:hover{
   stroke-width: 20px;
+}
+
+.loudAreas:hover + .cls-10 {
+  opacity:1;
 }
 
 .seasonal:hover{
@@ -97,58 +140,6 @@ header {
   width:100vw;
   z-index:4
 }
-
-.circle {
-  border: solid 200px red;
-  background-color: red;
-  border-radius: 50%;
-  opacity: 0.3;
-  position:absolute;
-  top: 35vh;
-  left: 40vw;
-}
-
-.circle1 {
-  border: solid 300px red;
-  background-color: red;
-  border-radius: 50%;
-  opacity: 0.3;
-  position:absolute;
-  top: 220vh;
-  left: 25vw;
-}
-
-
-.circle2 {
-  border: solid 250px green;
-  background-color: green;
-  border-radius: 50%;
-  opacity: 0.3;
-  position:absolute;
-  top: 130vh;
-  left: 35vw;
-}
-
-.circle3 {
-  border: solid 100px green;
-  background-color: green;
-  border-radius: 50%;
-  opacity: 0.3;
-  position:absolute;
-  top: 250vh;
-  left: 10vw;
-}
-
-.circle4 {
-  border: solid 200px teal;
-  background-color: teal;
-  border-radius: 50%;
-  opacity: 0.3;
-  position:absolute;
-  top: 100vh;
-  left: 10vw;
-}
-
 
 
 .container {
@@ -303,4 +294,3 @@ header {
   }
 
 }
-
