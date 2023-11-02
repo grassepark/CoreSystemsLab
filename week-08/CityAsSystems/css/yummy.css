@@ -12,17 +12,76 @@ body {
   padding: 10vw;
 
 }
-
 .cls-1 {
-  fill: #1da1f2;
+  fill: #cae0a4;
+  stroke: #90d390;
+  stroke-width: 2px;
 }
-.cls-1:hover {
-  fill: purple;
-  stroke: red;
-  stroke-width: 3px;
-  transition: fill 0.4s;
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-9 {
+  stroke-miterlimit: 10;
+}
+.quietAreas {
+  fill: #39b54a;
+  stroke: #39b54a;
+  opacity: 0.29;
+  transition:stroke-width 300ms;
+}
+.cls-2,
+.cls-3,
+.cls-9 {
+  opacity: 0.29;
+}
+.loudAreas {
+  fill: #f209;
+  stroke: #f20;
+  transition:stroke-width 300ms;
+}
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.seasonal {
+  fill: none;
+  stroke: #40a8cc;
+  transition:stroke-width 300ms;
+}
+.cls-4 {
+  stroke-dasharray: 11.83 11.83;
+}
+.cls-5 {
+  stroke-dasharray: 12.06 12.06;
+}
+.cls-6 {
+  stroke-dasharray: 11.94 11.94;
+}
+.cls-7 {
+  stroke-dasharray: 12.41 12.41;
+}
+.seasonal {
+  stroke-dasharray: 12.33 12.33;
+}
+.cls-9 {
+ transform: scale(0.7);
 }
 
+.quietAreas:hover {
+  stroke-width: 20px;
+}
+
+.loudAreas:hover{
+  stroke-width: 20px;
+}
+
+.seasonal:hover{
+  stroke-width: 20px;
+}
 
 h1 {
   font-family: "Roboto", sans-serif;
