@@ -9,9 +9,85 @@ body {
 
 .map {
   height: 100vh;
-  padding: 10vw;
+  padding: 10vw 10vw;
 }
 
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.key-text{
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+
+header {
+  padding: 15px 30px; 
+  background: lightgray;
+  width:100vw;
+  z-index:4;
+  overflow: hidden;
+}
+
+
+#key {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  z-index: 99;
+  background-color: white;
+  padding:10px 20px;
+  border: 2px solid #000;
+  border-radius: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin-bottom: 10px;
+}
+
+.sound {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #f20; 
+  margin-right: 10px;
+}
+
+.smell {
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: purple; 
+  margin-right: 10px;
+}
+
+.good{
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #39b54a; 
+  margin-right: 10px;
+}
+
+.season{
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  background-color: #40a8cc; 
+  margin-right: 10px;
+}
+
+/* CSS for the Map */
 .cls-1 {
   fill: #cae0a4;
   stroke: #90d390;
@@ -55,6 +131,7 @@ body {
   position: absolute;
   z-index: 99;
   opacity:0;
+  pointer-events: none;
   transition:opacity 300ms;
   padding-top:90%;
   padding-left: 40%;
@@ -65,18 +142,21 @@ body {
   padding:20px;
 }
 
-
-
-#popup1 p {
- /* add font and stuff here */
-}
-
 .loudAreas {
   fill: #f20;
   stroke: #f20;
   opacity: 0.29;
   transition:stroke-width 300ms;
 }
+
+
+.smelly {
+  fill: purple;
+  stroke: purple;
+  opacity: 0.29;
+  transition:stroke-width 300ms;
+}
+
 
 
 
@@ -109,7 +189,6 @@ body {
  transform: scale(0.7);
 }
 
-
 .quietAreas:hover {
   stroke-width: 20px;
 }
@@ -126,31 +205,10 @@ body {
   stroke-width: 20px;
 }
 
-h1 {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 30px;
-}
-
-header {
-  display: flex;
-  padding: 15px 30px; 
-  background: lightgray;
-  width:100vw;
-  z-index:4
-}
 
 
-.container {
-  overflow:hidden;
-  background-image: url("/images/park.png");
-  height: 300vh;
-  width: 100vw !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
+/* Menu made by Erik Terwan  */
 
 #menuToggle {
   position: absolute;
@@ -166,8 +224,8 @@ header {
   height: 32px;
   position: absolute;
   cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
+  opacity: 0;
+  z-index: 2;
   -webkit-touch-callout: none;
 }
 
@@ -197,36 +255,20 @@ header {
   transform-origin: 0% 100%;
 }
 
-/* 
- * Transform all the slices of hamburger
- * into a crossmark.
- */
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-/*
- * But let's hide the middle one.
- */
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-
-/*
- * Ohyeah and the last one should go the other direction
- */
 #menuToggle input:checked ~ span:nth-last-child(2) {
   opacity: 1;
   transform: rotate(-45deg) translate(0, -1px);
 }
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
 #menu {
   position: absolute;
   width: 300px;
@@ -238,8 +280,6 @@ header {
   background: #ededed;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
 
@@ -251,13 +291,13 @@ header {
   font-size: 22px;
 }
 
-/*
- * And let's fade it in from the left
- */
 #menuToggle input:checked ~ ul {
   transform: none;
   opacity: 1;
 }
+
+
+/* media queries */
 
 @media screen and (max-width: 768px) {
   #menu {
@@ -268,29 +308,17 @@ header {
   }
 }
 @media screen and (max-width: 600px) {
-  .circle {
-    border: solid 120px red;
-    top: 50vh;
-  
+
+  .map {
+    padding: 5vw;
   }
 
-  .circle1 {
-    border: solid 130px red;
-  
-  }
-  
-  .circle2 {
-    border: solid 100px green;
-    top: 150vh;
-
+  #key {
+    margin-top: 20px;
+    z-index: 99;
+    padding:10px 20px;
+    position:static;
   }
 
-  .circle3 {
-    border: solid 100px green;
-  }
-
-  .circle4 {
-    border: solid 80px teal;
-  }
 
 }
