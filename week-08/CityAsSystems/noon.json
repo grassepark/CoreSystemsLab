@@ -7,13 +7,13 @@
 
     "ampitheatre": {
         "strokeWidth": 100
-    }
+    },
 
-    "Ralings_at_the_George_Washington_statue": {
+    "statue": {
         "strokeWidth": 50
-    }
+    },
 
-    "The_long_wooden_benches_in_the_park": {
+    "benches": {
         "strokeWidth": 50
     }
     

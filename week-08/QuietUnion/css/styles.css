@@ -1,0 +1,150 @@
+@import url("https://use.typekit.net/xcg8gvp.css");
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background:grey;
+}
+
+.map {
+    display: block; 
+    background-color: beige; 
+    width: 100vw;
+    height: 100vh;
+}
+
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color:black;
+  }
+
+  h2 {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    color:black;
+  }
+  
+  p{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color:black;
+  }
+
+.key-text{
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    color:black;
+  }
+  
+  
+  .header {
+    padding: 15px 30px;
+    position:absolute;
+    color: black;
+    width:100vw;
+    z-index:4;
+    overflow: hidden;
+
+  }
+  
+  
+  #key {
+    position: absolute;
+    top: 5%;
+    left: 3%;
+    z-index: 99;
+    background-color: white;
+    padding:10px 20px;
+    border: 2px solid black;
+    border-radius: 20px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+
+  .construction {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(255, 102, 102); 
+    margin-right: 10px;
+  }
+  
+  .traffic {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(178, 102, 178); 
+    margin-right: 10px;
+  }
+  
+  .subway{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(179, 183, 187); 
+    margin-right: 10px;
+  }
+  
+  .streetVendors{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(255, 195, 77); 
+    margin-right: 10px;
+  }
+ 
+  .nightlife {
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(255, 155, 210); 
+    margin-right: 10px;
+  }
+  
+  .people{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(255, 252, 235); 
+    margin-right: 10px;
+    border: 2px solid #000;
+  }
+  
+  .cityServices{
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background-color: rgb(77, 77, 77); 
+    margin-right: 10px;
+  }
+
+  
+  
+  @media screen and (max-width: 800px) {
+  #key {
+    display:block;
+    position:static;
+  }
+
+  
+  
+  }
+
+  
+
